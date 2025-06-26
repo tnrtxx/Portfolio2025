@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/tnrtxx/for-uploads/main/tina-icon.png"
+        type="image/x-icon" />
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+
+
+    <!--CSS-->
+    <style>
+        /*Genereal Styles*/
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-weight: 500;
+        }
+
+        html {
+            font-size: 62.5%;
+            scrollbar-gutter: overlay;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: "Montserrat", sans-serif;
+            line-height: 1;
+            font-weight: 400;
+            color: #1d1d1d;
+            overflow-x: hidden;
+            font-size: 1.6rem;
+        }
+
+
+        /*Nav Bar Styles*/
+        /*** ╔════════════════════════════════╗ ***/
+        /*** ║  HEADER                        ║ ***/
+        /*** ╚════════════════════════════════╝ ***/
+
+        /*NAVBAR*/
+
+        .nav-link {
+            font-weight: 500;
+            color: #f5f5f5;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #1743b3;
+            font-weight: 500;
+            color: #f5f5f5;
+            font-size: 1.10em;
+        }
+
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+            size: 2em;
+
+        }
+
+        .navbar-toggler {
+            border: none;
+            border-width: 0;
+            font-weight: bolder;
+            font-size: 2em;
+            color: #f5f5f5;
+        }
+
+        /*BODY*/
+
+
+        .landing-page-photo {
+            margin-top: 2em;
+            align-items: center;
+
+
+        }
+
+        .greetings-name {
+            font-size: 3em;
+            font-weight: bold;
+
+
+        }
+
+        .greetings-position {
+            font-size: 3em;
+            font-weight: bold;
+            color: #1743b3;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .greetings-container {
+            margin-left: 1em;
+            margin-right: 1em;
+            margin-top: 2em;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .landing-page-text {
+            vertical-align: middle;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+
+        }
+
+        img,
+        .img-container {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        button {
+            background-color: #1743b3;
+            color: #f5f5f5;
+            border: none;
+            border-radius: .25em;
+
+        }
+
+
+        /*TRANSITIONS*/
+
+        a:hover,
+        a::after {
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+
+        .active a {
+            font-weight: bolder;
+            color: #f5f5f5;
+        }
+
+
+        button:hover {
+            box-shadow: 2px 5px 15px 8px rgba(4, 12, 80, 0.081);
+            transition: all 0.5s;
+            transform: scale(1.02);
+        }
+
+        /*SERVICES OFFERED*/
+
+        .services-page {
+            background-color: #1743b3;
+            padding-top: 3em;
+            margin-top: 2em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+
+
+        }
+
+        .services-container {
+            background-color: #1743b3;
+            padding-top: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: .5em;
+
+
+        }
+
+        .services-text {
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        .card {
+            margin: 1em 2em;
+        }
+
+        /*ABOUT ME PAGE*/
+
+        .about-page-photo {
+            margin-top: 2em;
+            align-items: center;
+
+
+        }
+
+        .about-title {
+            font-size: 2em;
+            font-weight: bold;
+
+
+        }
+
+        .about-greetings {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1743b3;
+            margin-top: 0.75em;
+        }
+
+        .about-desc {
+            font-size: 1.25em;
+            font-weight: 500;
+        }
+
+        .about-container {
+            margin-top: 2em;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            margin-right: 2em;
+            margin-left: 2em;
+        }
+
+        .landing-page-text {
+            vertical-align: middle;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+
+        }
+
+        img,
+        .img-container {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f5f5f5;
+        }
+
+        /*FOOTER*/
+
+        .footer {
+            color: #1d1d1d;
+            margin:auto;
+            
+        }
+
+
+        .social-media-icons {
+            color: #1d1d1d;
+            font-size: 2em;
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+
+        /*MY WORKS*/
+
+        .works-category{
+            margin: 1em;
+        }
+
+        .category-text{
+            font-size: 1.7em;
+            font-weight: 700;
+            vertical-align: middle;
+            text-align: center;
+            justify-content: center;
+            
+        }
+
+        .sun-invitation:hover{
+            box-shadow: 2px 5px 15px 8px rgba(4, 12, 80, 0.081);
+            transition: all 0.5s;
+            transform: scale(1.02);
+        }
+
+        hr.dotted {
+        border-top: 3px dotted #777;
+        
+        }
+
+        .solid{
+            margin-top: 2em;
+        }
+
+    </style>
+
+    <title>my works
+    </title>
+</head>
+
+<body>
+
+    <!-- NAV BAR-->
+    <nav class="navbar navbar-expand-lg  py-4 px-4">
+        <a class="navbar-brand px-4" href="index.html"> <img
+                src="https://raw.githubusercontent.com/tnrtxx/for-uploads/main/madebytina-white%400.33x%400.5x.png"></a>
+
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#btn"> <i
+                class='bx bx-menu'></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="btn">
+            <ul class="navbar-nav ms-auto px-4">
+                <li class="nav-item">
+                    <a class="nav-link ps-5 py-4" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link  ps-5 py-4" href="my-works.html">My Works</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT-->
+
+    <div class="row works-category">
+
+        <!-- MY WORKS PAGE -->
+
+        <!--SUNDAY INVITATIONS-->
+        <h1 class="category-text justify-content-center align-items-center text-center text-md-start pt-5 px-5">Sunday Invitations</h1>
+
+            <div class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                        <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-1%400.5x.jpg">  
+                </div>
+            </div>
+            <div class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-2%400.5x.jpg">
+                </div>
+            </div>
+            <div class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-3%400.5x.jpg">
+                </div>
+            </div>
+            <div class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-4%400.5x.jpg">
+                </div>
+            </div>
+
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-5%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-6%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-7%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sunday-8%400.5x.jpg">
+                </div>
+            </div>
+
+            <hr class="solid">
+         
+            <!--SERMON NOTES-->
+            <h1 class="category-text justify-content-center align-items-center text-center text-md-start pt-5 px-5">Sermon Notes</h1>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-1%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-2%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-3%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-4%400.5x.jpg">
+                </div>
+            </div>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-5%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-6%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-7%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-8%400.5x.jpg">
+                </div>
+            </div>
+
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-9%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-10%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-11%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-12%400.5x.jpg">
+                </div>
+            </div>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-13%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-14%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation  justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-15%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/sermon-16%400.5x.jpg">
+                </div>
+            </div>
+            
+            <hr class="solid">
+
+
+            <!--LOGO-->
+            <h1 class="category-text justify-content-center align-items-center text-center text-md-start pt-5 px-5">Logo and Branding</h1>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/logo-1%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/logo-2%400.5x.jpg">
+                </div>
+            </div>
+            
+            
+            <hr class="solid">
+            
+            
+            <!--UI/UX-->
+            <h1 class="category-text justify-content-center align-items-center text-center text-md-start pt-5 px-5">UI/UX Designs</h1>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/ui-1%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/ui-2%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/ui-3%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/ui-4%400.5x.jpg">
+                </div>
+            </div>
+            
+            
+            <hr class="solid">
+            
+            
+            <!--Other Designs-->
+            <h1 class="category-text justify-content-center align-items-center text-center text-md-start pt-5 px-5">Other Designs</h1>
+            
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/others-1%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/others-2%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/others-3%400.5x.jpg">
+                </div>
+            </div>
+            <div
+                class="sun-invitation justify-content-center align-items-center text-center text-md-start col-lg-3 col-md-6 col-sm-12 mt-2">
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/tnrtxx/madebytina/main/others-4%400.5x.jpg">
+                </div>
+            </div>
+        
+        
+    
+    </div>
+
+
+
+<!--FOOTER-->
+<div class="footer justify-content-center align-items-center text-center text-md-start">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 col-sm-12 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2025 madebytina.</span>
+
+        </div>
+
+        <div class="social-media-icons text-muted">
+
+            <a class="icon" href="https://www.facebook.com/christina.reta.1232/" style="color:#777;"> <i
+                    class='bx bxl-facebook-square'></i></a>
+
+            <a class="icon"
+                href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXPWHtfjwhgKgXvDmmmtVCShRMtsplNCtmwWZfcVGGxvJSNBVvrxsnkKphJNzVmtVbKdH"
+                style="color:#777;"><i class='bx bxl-gmail'></i></a>
+
+            <a class="icon" href="https://www.linkedin.com/in/mariachristinareta/" style="color:#777;"><i
+                    class='bx bxl-linkedin-square'></i></a>
+        </div>
+
+
+
+    </footer>
+</div>
+
+</body>
+
+
+
+
+
+</html>
